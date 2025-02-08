@@ -27,7 +27,16 @@ cd git-oauth-bridge
 npm install
 ```
 
-3. **Configure Environment Variables:**
+3. **Retrieve GitHub OAuth Credentials:**
+   - Go to [GitHub Developer Settings](https://github.com/settings/developers).
+   - Click on **"New OAuth App"**.
+   - Fill in the required fields:
+     - **Application Name:** Your app's name.
+     - **Homepage URL:** Your app's homepage (e.g., `http://localhost:3000`).
+     - **Authorization Callback URL:** `http://localhost:3000/auth/github/callback` (or your actual callback URL).
+   - After creating the app, you will see **Client ID** and **Client Secret**.
+
+4. **Configure Environment Variables:**
 Create a `.env` file in the root directory with the following content:
 ```env
 GITHUB_CLIENT_ID=your_github_client_id
@@ -35,7 +44,7 @@ GITHUB_CLIENT_SECRET=your_github_client_secret
 PORT=3000 # Optional, defaults to 3000
 ```
 
-4. **Run the Server:**
+5. **Run the Server:**
 ```bash
 node server.js
 ```

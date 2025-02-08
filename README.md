@@ -3,9 +3,6 @@
 
 This repository provides a simple Node.js + Express backend that handles GitHub OAuth authentication. It exchanges the GitHub authorization code for an access token and retrieves user information.
 
-## Repository Name Suggestion
-**git-oauth-bridge**
-
 ## Features
 - Handles GitHub OAuth authentication
 - Exchanges authorization code for access token
